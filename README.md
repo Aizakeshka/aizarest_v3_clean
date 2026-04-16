@@ -2,7 +2,6 @@
 
 A restaurant booking platform for Kyrgyzstan. Browse restaurants in Bishkek, Osh, and across the country, book tables online, and manage reservations — all without a backend.
 
-Live demo: [https://aizarest.vercel.app](https://aizarest.vercel.app)
 
 ---
 
