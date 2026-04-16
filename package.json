@@ -2,7 +2,7 @@
   "name": "aizarest",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://Aizakeshka.github.io/aizarest_v3_clean/",
+  "homepage": "https://aizakeshka.github.io/aizarest_v3_clean/",
   "type": "module",
   "scripts": {
     "dev": "vite",
