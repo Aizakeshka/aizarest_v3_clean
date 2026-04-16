@@ -32,7 +32,7 @@ function Layout({ children, hideFooter = false }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/aizarest_v3_clean">
       <ThemeProvider>
         <AuthProvider>
           <AppProvider>
