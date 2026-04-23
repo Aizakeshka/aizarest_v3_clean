@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { AppProvider } from './context/AppContext';
 import { ThemeProvider } from './context/ThemeContext';
@@ -32,7 +32,7 @@ function Layout({ children, hideFooter = false }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider>
         <AuthProvider>
           <AppProvider>
@@ -81,6 +81,6 @@ export default function App() {
           </AppProvider>
         </AuthProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

@@ -91,7 +91,7 @@ img { max-width: 100%; display: block; }
 
 /* ─── Layout ─────────────────────────────── */
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
 /* ─── Navbar ─────────────────────────────── */
 
@@ -806,7 +806,7 @@ tr:hover td { background: var(--bg); }
 
 .restaurant-detail-grid {
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: 1fr minmax(280px, 360px);
   gap: 48px;
   align-items: start;
   padding: 56px 24px;
@@ -986,11 +986,39 @@ tr:hover td { background: var(--bg); }
   .grid-4 { grid-template-columns: 1fr 1fr; }
   .admin-stats-grid { grid-template-columns: 1fr 1fr; }
 }
-
 @media (max-width: 900px) {
-  .restaurant-detail-grid { grid-template-columns: 1fr; padding: 32px 24px; }
-  .restaurant-detail-grid > div:last-child { position: static !important; }
-  .admin-charts-grid { grid-template-columns: 1fr; }
+  .desktop-nav { display: none; }
+  .burger-btn { display: flex; }
+
+  .navbar-inner {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+
+  /* скрываем кнопки авторизации в хедере */
+  .navbar-actions .auth-buttons {
+    display: none;
+  }
+
+  .navbar-actions .user-menu-btn {
+    display: none;
+  }
+
+  /* но показываем их в мобильном меню */
+  .mobile-menu .auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .mobile-menu .btn {
+    flex: 1;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1004,6 +1032,8 @@ tr:hover td { background: var(--bg); }
   .auth-deco { display: none; }
   .auth-form-side { padding: 40px 24px; }
   .time-grid-menu { grid-template-columns: repeat(4, 1fr); }
+  .container {padding: 0 14px;}
+
 }
 
 @media (max-width: 480px) {
